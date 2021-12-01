@@ -30,7 +30,7 @@ ZSH_THEME="TheOne"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract history git git-flow vi-mode history-substring-search brew osx tmux go golang mix npm docker web-search zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(extract history git git-flow vi-mode history-substring-search brew macos tmux golang mix npm docker web-search zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,7 +142,7 @@ function rssh () {
 
 alias rssh='rssh'
 alias tmux='tmux -2'
-alias v='nvim'
+alias v='lvim'
 alias m='vifm'
 alias c='cd'
 alias co='git checkout'
@@ -165,7 +165,7 @@ alias ffinish='git flow feature finish'
 alias vu='vagrant up'
 alias vs='vagrant ssh'
 alias vh='vagrant halt'
-alias r='rake'
+alias r='ranger'
 alias rc='rake clean'
 alias dev='git checkout develop'
 alias master='git checkout master'
@@ -193,7 +193,7 @@ alias dcd='docker-compose down'
 
 unalias gm
 
-export EDITOR=nvim
+export EDITOR=lvim
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
 
@@ -257,5 +257,13 @@ if [ -z $MC_SID ]; then
   fi
 fi
 export PATH="/home/linuxbrew/.linuxbrew/Homebrew/bin:$PATH"
-export PATH=$HOME/.asdf/shims/:/opt/asdf-vm/bin:$PATH
+export PATH=$HOME/.asdf/shims/:/opt/asdf-vm/bin:/home/tibi/.cargo/bin:$PATH
 source /usr/share/nvm/init-nvm.sh
+
+
+export FLYCTL_INSTALL="/home/tibi/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+export EDITOR=lvim
+export BROWSER=brave
+export _JAVA_AWT_WM_NONREPARENTING=1

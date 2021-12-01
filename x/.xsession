@@ -5,6 +5,7 @@ xrandr --output HDMI-0 --rotate left --left-of DP-0
 xbindkeys
 picom -b
 hsetroot -solid '#000000'
+export _JAVA_AWT_WM_NONREPARENTING=1
 #sleep 2s
 #hsetroot
 

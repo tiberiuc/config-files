@@ -99,7 +99,7 @@
   m:0x8 + c:53
   Alt + x
 
-"google-chrome"
+"brave"
   m:0x8 + c:52
   Alt + z
 
@@ -111,6 +111,10 @@
 
 "systemctl suspend"
   F11
+
+"skippy-xd"
+  Alt + w
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
