@@ -141,6 +141,7 @@ function rssh () {
 
 alias rssh='rssh'
 alias tmux='tmux -2'
+alias mc="mc --nosubshell"
 alias v='lvim'
 alias m='vifm'
 alias c='cd'
