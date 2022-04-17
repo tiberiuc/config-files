@@ -31,7 +31,6 @@ ZSH_THEME="TheOne"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(extract history git git-flow vi-mode history-substring-search brew macos tmux golang mix npm docker web-search zsh-autosuggestions zsh-syntax-highlighting)
-
 source $ZSH/oh-my-zsh.sh
 
 command_exists () {
@@ -258,7 +257,7 @@ if [ -z $MC_SID ]; then
 fi
 export PATH="/home/linuxbrew/.linuxbrew/Homebrew/bin:$PATH"
 export PATH=$HOME/.asdf/shims/:/opt/asdf-vm/bin:/home/tibi/.cargo/bin:$PATH
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
 
 
 export FLYCTL_INSTALL="/home/tibi/.fly"
@@ -267,3 +266,7 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export EDITOR=lvim
 export BROWSER=brave
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

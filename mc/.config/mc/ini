@@ -84,11 +84,10 @@ editor_drop_selection_on_copy=true
 editor_cursor_after_inserted_block=false
 editor_state_full_filename=false
 editor_ask_filename_before_edit=false
-shadows=true
 editor_filesize_threshold=64M
 editor_stop_format_chars=-+*\\,.;:&>
 
-filepos_max_saved_entries=1024
+shadows=true
 
 [Layout]
 message_visible=false
@@ -100,7 +99,7 @@ menubar_visible=true
 free_space=true
 horizontal_split=false
 vertical_equal=true
-left_panel_size=68
+left_panel_size=76
 horizontal_equal=true
 top_panel_size=1
 
@@ -124,11 +123,7 @@ xterm=
 
 xterm-256color=
 
-alacritty=
-
 screen-256color=
-
-st-256color=
 
 [Panels]
 show_mini_info=true
@@ -165,8 +160,6 @@ content_whole_words=false
 content_all_charsets=false
 ignore_dirs_enable=true
 ignore_dirs=
-
-follow_symlinks=false
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print
