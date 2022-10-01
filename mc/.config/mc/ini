@@ -99,7 +99,7 @@ menubar_visible=true
 free_space=true
 horizontal_split=false
 vertical_equal=true
-left_panel_size=40
+left_panel_size=83
 horizontal_equal=true
 top_panel_size=1
 
@@ -160,6 +160,8 @@ content_whole_words=false
 content_all_charsets=false
 ignore_dirs_enable=true
 ignore_dirs=
+
+follow_symlinks=false
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print
