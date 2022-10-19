@@ -30,9 +30,8 @@ ZSH_THEME="TheOne"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract history git git-flow vi-mode history-substring-search brew macos tmux golang mix npm docker web-search zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(extract history git vi-mode history-substring-search brew macos tmux mix npm docker web-search zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-
 command_exists () {
   type "$1" &> /dev/null ;
 }
