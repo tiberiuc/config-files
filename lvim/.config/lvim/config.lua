@@ -1,4 +1,6 @@
 lvim.format_on_save = true
+lvim.colorscheme = "darkplus"
+-- lvim.colorscheme = "tokyonight"
 
 lvim.builtin.treesitter.ensure_installed = {
   "javascript",
@@ -48,6 +50,7 @@ lvim.plugins = {
     end,
   },
   { "LunarVim/peek.lua" },
+  { "lunarvim/darkplus.nvim" },
 }
 
 lvim.builtin.which_key.mappings["E"] = {
