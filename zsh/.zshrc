@@ -103,18 +103,6 @@ bindkey '^Z' fancy-ctrl-z
 
 export TERM=screen-256color
 
-# gitall
-function gall () {
-  git add .
-  if [ "$1" != "" ] # or better, if [ -n "$1" ]
-  then
-    git commit -am "$1"
-  else
-    git commit -am update
-  fi
-  git push
-}
-
 function rssh () {
   local -a arr
 
@@ -139,10 +127,9 @@ function rssh () {
 }
 
 alias rssh='rssh'
-alias tmux='tmux -2'
+alias tmux="tmux -2"
 alias mc="mc --nosubshell"
 alias v='lvim'
-alias m='vifm'
 alias c='cd'
 alias co='git checkout'
 alias up='git up'
@@ -150,27 +137,13 @@ alias push='git push'
 alias pull='git pull'
 alias add='git add .'
 alias com='git commit -am'
-alias gall='gall'
 alias g='git'
 alias gf='git flow'
-alias status='git status'
 alias gs='git status'
 alias gd='git diff'
 alias gl='lazygit'
-alias feature='git flow feature'
-alias hotfix='git flow hotfix'
-alias fstart='git flow feature start'
-alias ffinish='git flow feature finish'
-alias vu='vagrant up'
-alias vs='vagrant ssh'
-alias vh='vagrant halt'
 alias r='ranger'
-alias rc='rake clean'
-alias dev='git checkout develop'
-alias master='git checkout master'
 alias merge='git merge'
-alias nn='/usr/sbin/n'
-alias n='nnn'
 
 # docker aliases
 alias d='docker'
@@ -250,9 +223,9 @@ transfer() {
 # Start tmux at login
 if [ -z $MC_SID ]; then
   if [ -z $TMUX ]; then
-    if [[ ! "$OSTYPE" == "darwin"*  ]]; then
-      TERM=screen-256color tmux attach || tmux
-    fi
+    # if [[ ! "$OSTYPE" == "darwin"*  ]]; then
+      tmux attach || tmux
+    # fi
   fi
 fi
 export PATH="/home/linuxbrew/.linuxbrew/Homebrew/bin:$PATH"
