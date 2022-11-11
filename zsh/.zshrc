@@ -132,17 +132,14 @@ alias mc="mc --nosubshell"
 alias v='lvim'
 alias c='cd'
 alias co='git checkout'
-alias up='git up'
 alias push='git push'
 alias pull='git pull'
 alias add='git add .'
 alias com='git commit -am'
 alias g='git'
-alias gf='git flow'
 alias gs='git status'
 alias gd='git diff'
 alias gl='lazygit'
-alias r='ranger'
 alias merge='git merge'
 
 # docker aliases
