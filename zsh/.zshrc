@@ -227,7 +227,6 @@ if [ -z $MC_SID ]; then
 fi
 export PATH="/home/linuxbrew/.linuxbrew/Homebrew/bin:$PATH"
 export PATH=$HOME/.asdf/shims/:/opt/asdf-vm/bin:/home/tibi/.cargo/bin:$PATH
-#source /usr/share/nvm/init-nvm.sh
 
 
 export FLYCTL_INSTALL="/home/tibi/.fly"
@@ -237,6 +236,8 @@ export EDITOR=lvim
 export BROWSER=brave
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(direnv hook zsh)"
