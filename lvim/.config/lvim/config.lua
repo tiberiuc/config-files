@@ -187,6 +187,12 @@ lvim.plugins = {
   },
   { "LunarVim/peek.lua" },
   { "lunarvim/darkplus.nvim" },
+  {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    -- This will not install any breaking changes.
+    -- For major updates, this must be adjusted manually.
+    version = "^1.0.0",
+  },
 }
 
 lvim.builtin.which_key.mappings["E"] = {
@@ -229,3 +235,6 @@ lvim.builtin.which_key.mappings["E"] = {
 
 local opts_peek = { noremap = true, silent = true }
 vim.api.nvim_set_keymap("n", "gp", ":lua require('peek').Peek('definition')<CR>", opts_peek)
+
+lvim.builtin.which_key.mappings["s"]["T"] = {
+  require("telescope").extensions.live_grep_args.live_grep_args, "Search" }
