@@ -1,7 +1,7 @@
 #!/bin/bash
 #nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
-xrandr --output HDMI-0 --rotate left --left-of DP-0
+xrandr --output HDMI-0 --rotate left --left-of DP-0 -r 29.97
 xbindkeys
 picom -b
 hsetroot -solid '#000000'

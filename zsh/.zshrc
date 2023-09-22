@@ -129,6 +129,7 @@ function rssh () {
 alias rssh='rssh'
 alias tmux="tmux -2"
 alias mc="mc --nosubshell"
+alias m="ranger"
 alias v='lvim'
 alias c='cd'
 alias co='git checkout'
@@ -152,7 +153,7 @@ alias di='docker images'
 alias drm='docker rm -f'
 alias drmi='docker rmi -f'
 alias dr='docker run'
-alias dco='docker-compose'
+  alias dco='docker-compose'
 alias dcr='dcr(){ docker-compose run $1 sh  }; dcr'
 alias dce='dce(){ docker-compose exec $1 sh  }; dce'
 alias dcre='docker-compose restart'
