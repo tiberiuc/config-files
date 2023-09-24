@@ -130,7 +130,7 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 lvim.lsp.installer.setup.ensure_installed = {
-  "sumneko_lua",
+  "lua_ls",
   "cssls",
   "tsserver",
   "tailwindcss",
@@ -153,7 +153,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "elixirls" }
 
 -- Additional Plugins
 elixir_ls_base_opts = {
-  tag = "v0.13.0",
+  tag = "v0.16.0",
   -- branch = "master",
 }
 
