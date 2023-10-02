@@ -160,6 +160,12 @@ elixir_ls_base_opts = {
 lvim.plugins = {
   {
     -- use "mhanberg/elixir.nvim" if you don't need the debugger
+    "ThePrimeagen/harpoon",
+    --- "tiberiuc/elixir.nvim", branch = "add-support-for-dap-debugger-path",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    -- use "mhanberg/elixir.nvim" if you don't need the debugger
     "mhanberg/elixir.nvim",
     --- "tiberiuc/elixir.nvim", branch = "add-support-for-dap-debugger-path",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -238,3 +244,14 @@ vim.api.nvim_set_keymap("n", "gp", ":lua require('peek').Peek('definition')<CR>"
 
 lvim.builtin.which_key.mappings["s"]["T"] = {
   require("telescope").extensions.live_grep_args.live_grep_args, "Search" }
+
+
+lvim.builtin.which_key.mappings["s"]["m"] = {
+  ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>", "Harpoon" }
+lvim.builtin.which_key.mappings["s"]["a"] = {
+  ":lua require(\"harpoon.mark\").add_file()<CR>", "Harpoon mark file" }
+lvim.builtin.which_key.mappings["s"]["x"] = {
+  ":lua require(\"harpoon.mark\").rm_file()<CR>", "Harpoon un-mark file" }
+
+vim.api.nvim_set_keymap("n", "gj", ":lua require(\"harpoon.ui\").nav_prev()<CR>", {})
+vim.api.nvim_set_keymap("n", "gk", ":lua require(\"harpoon.ui\").nav_next()<CR>", {})
