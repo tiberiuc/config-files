@@ -246,3 +246,5 @@ if [[ ! "$OSTYPE" == "darwin"*  ]]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 fi
+
+eval "$(zoxide init zsh)"
