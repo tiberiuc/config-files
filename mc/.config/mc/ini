@@ -88,6 +88,7 @@ editor_filesize_threshold=64M
 editor_stop_format_chars=-+*\\,.;:&>
 
 shadows=true
+shell_directory_timeout=900
 
 [Layout]
 message_visible=false
@@ -99,7 +100,7 @@ menubar_visible=true
 free_space=true
 horizontal_split=false
 vertical_equal=true
-left_panel_size=73
+left_panel_size=147
 horizontal_equal=true
 top_panel_size=1
 
@@ -132,7 +133,7 @@ show_mini_info=true
 kilobyte_si=false
 mix_all_files=false
 show_backups=true
-show_dot_files=true
+show_dot_files=false
 fast_reload=false
 fast_reload_msg_shown=false
 mark_moves_down=true
@@ -166,7 +167,7 @@ ignore_dirs=
 follow_symlinks=false
 
 [Panelize]
-Find *.orig after patching=find . -name \\*.orig -print
-Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm +011 \\) -o \\( -perm -02000 -a -perm +01 \\) \\) -print
-Find rejects after patching=find . -name \\*.rej -print
 Modified git files=git ls-files --modified
+Find rejects after patching=find . -name \\*.rej -print
+Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm +011 \\) -o \\( -perm -02000 -a -perm +01 \\) \\) -print
+Find *.orig after patching=find . -name \\*.orig -print
