@@ -69,7 +69,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "elixirls" }
 
 -- Additional Plugins
 elixir_ls_base_opts = {
-  tag = "v0.21.3",
+  tag = "v0.22.0",
   -- branch = "master",
 }
 
