@@ -15,7 +15,11 @@ return {
     },
     config = function()
       require('telescope').setup({
+        extensions = {
+          fzf = {}
+        }
       })
+      require("telescope").load_extension("fzf")
       require("telescope").load_extension("recent_files")
       local builtin = require('telescope.builtin')
       local ivy = require('telescope.themes').get_ivy()
