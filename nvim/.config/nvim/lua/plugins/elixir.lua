@@ -9,7 +9,7 @@ return {
 
       elixir.setup {
         credo = {
-          enable = false,
+          enable = true,
         },
         nextls = {
           enable = false
