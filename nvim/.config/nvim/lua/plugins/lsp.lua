@@ -14,8 +14,30 @@ return {
         },
       },
     },
+    opts = {
+      servers = {
+        -- Disable automatic install for specific servers
+        elixirls = { mason = false },
+        -- Add more servers as needed
+      },
+    },
+    capabilities = require("cmp_nvim_lsp").default_capabilities(),
     config = function()
       require('lspconfig').lua_ls.setup {}
+
+      local tailwindcss_lsp_opts = {
+        root_dir = require("lspconfig.util").root_pattern("assets/tailwind.config.js", "tailwind.config.js",
+          "tailwind.config.cjs", "tailwind.js",
+          "tailwind.cjs"),
+        init_options = {
+          userLanguages = { heex = "html", elixir = "html" }
+        },
+      }
+
+      require("lspconfig").tailwindcss.setup(tailwindcss_lsp_opts)
+
+
+
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -47,5 +69,5 @@ return {
         end
       })
     end,
-  }
+  },
 }
