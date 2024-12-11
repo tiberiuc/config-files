@@ -2,7 +2,12 @@ return {
   {
     "elixir-tools/elixir-tools.nvim",
     version = "*",
-    event = { "BufReadPre", "BufNewFile" },
+    -- event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+      "hrsh7th/cmp-nvim-lsp",
+    },
     config = function()
       local elixir = require("elixir")
       local elixirls = require("elixir.elixirls")
@@ -37,15 +42,10 @@ return {
         }
       }
 
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      require('lspconfig')['elixirls'].setup {
-        capabilities = capabilities
-      }
+      -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      -- require('lspconfig')['elixirls'].setup {
+      --   capabilities = capabilities
+      -- }
     end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-      "hrsh7th/cmp-nvim-lsp",
-    },
   }
 }
