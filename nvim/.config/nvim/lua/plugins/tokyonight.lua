@@ -6,7 +6,7 @@ return {
     opts = {},
     config = function()
       require('tokyonight').setup {
-        style = 'storm'
+        style = 'night'
       }
       require('tokyonight').load()
     end
