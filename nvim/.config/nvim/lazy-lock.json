@@ -14,7 +14,7 @@
   "neotest-plenary": { "branch": "master", "commit": "3523adcf9ffaad1911960c5813b0136c1b63a2ec" },
   "nvim-autopairs": { "branch": "master", "commit": "b464658e9b880f463b9f7e6ccddd93fb0013f559" },
   "nvim-cmp": { "branch": "main", "commit": "3403e2e9391ed0a28c3afddd8612701b647c8e26" },
-  "nvim-lspconfig": { "branch": "master", "commit": "b1729954329236f59d075bec79fdee7a6f3ce88b" },
+  "nvim-lspconfig": { "branch": "master", "commit": "5a812abc65d529ea7673059a348814c21d7f87ff" },
   "nvim-nio": { "branch": "master", "commit": "a428f309119086dc78dd4b19306d2d67be884eee" },
   "nvim-treesitter": { "branch": "master", "commit": "5874cac1b76c97ebb3fc03225bd7215d4e671cd2" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
