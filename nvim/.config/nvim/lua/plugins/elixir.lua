@@ -29,10 +29,10 @@ return {
             enableTestLenses = true,
           },
           on_attach = function(client, bufnr)
-            vim.keymap.set("n", "<space>Ef", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
-            vim.keymap.set("n", "<space>Et", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
-            vim.keymap.set("n", "<space>Eo", ":ElixirOutputPanel<cr>", { buffer = true, noremap = true })
-            vim.keymap.set("v", "<space>Em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("n", "<space>xf", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("n", "<space>xt", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("n", "<space>xo", ":ElixirOutputPanel<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("v", "<space>xm", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
           end,
         },
 
