@@ -22,6 +22,10 @@ vim.keymap.set("n", "<space>v", ":vsplit<CR>")
 vim.keymap.set("n", "<space>Q", ":q!<CR>")
 vim.keymap.set("n", "<space><space>", "<C-6>")
 
+-- keep visual mode after indent
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+
 vim.opt.clipboard = "unnamedplus"
 
 -- Highlight when yanking (copying) text
