@@ -20,7 +20,7 @@ return {
       require("mason-lspconfig").setup {
         ensure_installed = { "tailwindcss", "ts_ls" },
       }
-      require('lspconfig').lua_ls.setup {}
+      vim.lsp.config.lua_ls = {}
     end
   },
 }

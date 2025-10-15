@@ -32,7 +32,7 @@ return {
       --   config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
       --   lspconfig[server].setup(config)
       -- end
-      require('lspconfig').lua_ls.setup {}
+      vim.lsp.config.lua_ls = {}
 
       local tailwindcss_lsp_opts = {
         root_dir = require("lspconfig.util").root_pattern("assets/tailwind.config.js", "tailwind.config.js",
@@ -43,7 +43,7 @@ return {
         },
       }
 
-      require("lspconfig").tailwindcss.setup(tailwindcss_lsp_opts)
+      vim.lsp.config.tailwindcss = tailwindcss_lsp_opts
 
 
 
