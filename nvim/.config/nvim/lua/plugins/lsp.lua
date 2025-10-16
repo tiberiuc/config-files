@@ -25,25 +25,15 @@ return {
     -- capabilities = require("cmp_nvim_lsp").default_capabilities(),
     capabilities = require('blink.cmp').get_lsp_capabilities(),
     config = function(_, opts)
-      -- local lspconfig = require('lspconfig')
-      -- for server, config in pairs(opts.servers) do
-      --   -- passing config.capabilities to blink.cmp merges with the capabilities in your
-      --   -- `opts[server].capabilities, if you've defined it
-      --   config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-      --   lspconfig[server].setup(config)
-      -- end
       vim.lsp.config.lua_ls = {}
 
-      local tailwindcss_lsp_opts = {
-        root_dir = require("lspconfig.util").root_pattern("assets/tailwind.config.js", "tailwind.config.js",
-          "tailwind.config.cjs", "tailwind.js",
-          "tailwind.cjs"),
-        init_options = {
-          userLanguages = { heex = "html", elixir = "html" }
-        },
-      }
+      -- Setup Tailwind CSS LSP for Elixir/HEEx files using the new Neovim 0.11 API
+      -- The configuration is loaded from nvim-lspconfig's lsp/tailwindcss.lua
+      vim.lsp.config('tailwindcss', {
+        capabilities = require('blink.cmp').get_lsp_capabilities(),
+      })
 
-      vim.lsp.config.tailwindcss = tailwindcss_lsp_opts
+      vim.lsp.enable('tailwindcss')
 
 
 
